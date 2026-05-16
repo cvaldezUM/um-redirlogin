@@ -105,7 +105,7 @@ function renderLoggedIn(req, res) {
     });
 }
 
-router.get(['/', '/login'], async function(req, res, next) {
+router.get(['/'], async function(req, res, next) {
     try {
         updateStoredRedirectUrl(req);
 
@@ -152,7 +152,7 @@ router.get(['/', '/login'], async function(req, res, next) {
 function logout(req, res, next) {
     if (!req.session) {
         res.clearCookie('connect.sid', { path: '/' });
-        return res.redirect('/login');
+        return res.redirect('/');
     }
 
     return req.session.destroy((err) => {
@@ -161,7 +161,7 @@ function logout(req, res, next) {
         }
 
         res.clearCookie('connect.sid', { path: '/' });
-        return res.redirect('/login');
+        return res.redirect('/');
     });
 }
 
