@@ -87,6 +87,11 @@ function buildRedirectUrl(req) {
             }
         });
 
+        if (!targetUrl.searchParams.has('ciclo')) {
+            const cicloActual = req.app.config?.ciclo_actual;
+            targetUrl.searchParams.set('ciclo', cicloActual == null ? '' : String(cicloActual));
+        }
+
         if (/^https?:\/\//i.test(redirectUrl)) {
             return targetUrl.toString();
         }
