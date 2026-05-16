@@ -19,9 +19,6 @@
                 "client_email": "xxx@xxx-xxxxxxxxxxxxx.iam.gserviceaccount.com",
                 "private_key": "-----BEGIN PRIVATE KEY-----\nxxx\n-----END PRIVATE KEY-----\n",
                 "subject": "admin@univermilenium.edu.mx"
-            },
-            "spreadsheets":{
-                "datastudio":"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
             }
         },
         "temp_files_path": "C:\\tmp\\",
@@ -49,9 +46,6 @@
                 "client_email": "xxx@xxx-xxxxxxxxxxxxx.iam.gserviceaccount.com",
                 "private_key": "-----BEGIN PRIVATE KEY-----\nxxx\n-----END PRIVATE KEY-----\n",
                 "subject": "admin@univermilenium.edu.mx"
-            },
-            "spreadsheets":{
-                "datastudio":"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
             }
         },
         "temp_files_path": "C:\\tmp\\",
