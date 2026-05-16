@@ -7,9 +7,9 @@ const scopes = [
     'https://www.googleapis.com/auth/userinfo.profile'
 ];
 const redirectUserParamMap = {
-    given_name: 'nombretea',
-    family_name: 'apellidostea',
-    email: 'correotea'
+    given_name: 'nombre',
+    family_name: 'apellido',
+    email: 'correo'
 };
 
 function getQueryValue(value) {
