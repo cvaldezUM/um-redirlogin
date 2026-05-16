@@ -35,7 +35,7 @@ function updateStoredRedirectUrl(req) {
     delete req.session.postLoginRedirectUrl;
 }
 
-function getBaseRedirectUrl(req) {
+function getStoredRedirectUrl(req) {
     const queryRedirectUrl = getQueryValue(req.query?.url_destino);
 
     if (queryRedirectUrl) {
@@ -46,7 +46,27 @@ function getBaseRedirectUrl(req) {
         return req.session.postLoginRedirectUrl;
     }
 
+    return '';
+}
+
+function getBaseRedirectUrl(req) {
+    const storedRedirectUrl = getStoredRedirectUrl(req);
+
+    if (storedRedirectUrl) {
+        return storedRedirectUrl;
+    }
+
     return req.app.redirectAfterLoginUrl;
+}
+
+function buildPathWithRedirectUrl(pathname, redirectUrl) {
+    if (!redirectUrl) {
+        return pathname;
+    }
+
+    return pathname + '?' + new URLSearchParams({
+        url_destino: redirectUrl
+    }).toString();
 }
 
 function buildRedirectUrl(req) {
@@ -99,6 +119,7 @@ function renderLoggedIn(req, res) {
         moduledata: {
             authurl: getConnectionUrl(req.app.googleauth),
             continueurl: buildRedirectUrl(req),
+            logouturl: buildPathWithRedirectUrl('/logout', getStoredRedirectUrl(req)),
             googleLoggedIn: true,
             googleUser: req.session?.googleUser || null
         }
@@ -150,9 +171,11 @@ router.get(['/'], async function(req, res, next) {
 });
 
 function logout(req, res, next) {
+    const loginUrl = buildPathWithRedirectUrl('/', getStoredRedirectUrl(req));
+
     if (!req.session) {
         res.clearCookie('connect.sid', { path: '/' });
-        return res.redirect('/');
+        return res.redirect(loginUrl);
     }
 
     return req.session.destroy((err) => {
@@ -161,7 +184,7 @@ function logout(req, res, next) {
         }
 
         res.clearCookie('connect.sid', { path: '/' });
-        return res.redirect('/');
+        return res.redirect(loginUrl);
     });
 }
 
