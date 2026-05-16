@@ -1,41 +1,6 @@
 {
     "development": {
-        "fullurl": "https://online-tools.univermilenium.edu.mx/",
-        "bearer_tokens": [
-            "00000000-0000-0000-0000-000000000000"
-        ],
-        "db": {
-            "username": "user",
-            "password": "pass",
-            "database": "reportesUM_dev",
-            "host": "127.0.0.1",
-            "port": 3306,
-            "dialect": "mariadb",
-            "define": {
-                "timestamps": true,
-                "freezeTableName": true
-            },
-            "dialectOptions": {
-                "timezone": "Etc/GMT-5"
-            },
-            "logging": false
-        },
-        "email": {
-            "from": "DEV1 reportesUMv2<user@email.com>",
-            "senders": {
-                "TOLUCA RECTORÍA": "no-contestar-rectoria@univermilenium.edu.mx",
-                "NEZAHUALCÓYOTL": "no-contestar-neza@univermilenium.edu.mx",
-                "IXTAPALUCA": "no-contestar-ixtapa@univermilenium.edu.mx",
-                "TOLUCA AV. HIDALGO": "no-contestar-hidalgo@univermilenium.edu.mx",
-                "TOLUCA CIENCIAS DE LA SALUD": "no-contestar-salud@univermilenium.edu.mx",
-                "ECATEPEC": "no-contestar-ecatepec@univermilenium.edu.mx",
-                "PANTITLÁN": "no-contestar-pantitlan@univermilenium.edu.mx",
-                "CUAUTITLÁN": "no-contestar-cuautitlan@univermilenium.edu.mx",
-                "CHALCO": "no-contestar-chalco@univermilenium.edu.mx",
-                "EN LÍNEA": "no-contestar-enlinea@univermilenium.edu.mx",
-                "EDUCACIÓN CONTINUA": "no-contestar-edcontinua@univermilenium.edu.mx"
-            }
-        },
+        "fullurl": "https://redirlogin.univermilenium.edu.mx/",
         "google": {
             "client_id": "xxxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.apps.googleusercontent.com",
             "project_id": "xxxxxxxxxxxx-xxxxxxxxxxxxx",
@@ -59,87 +24,13 @@
                 "datastudio":"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
             }
         },
-        "aws": {
-            "s3": {
-                "bucket": "xxxxxxxxxxxxxxxx",
-                "region": "us-west-1",
-                "access_key_id": "xxxxxxxxxxxxxxxxxxxx",
-                "secret_access_key": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-                "session_token": "",
-                "endpoint": "",
-                "prefix": "google-drive",
-                "acl": "",
-                "storage_class": "",
-                "force_path_style": false
-            }
-        },
-        "openlms": {
-            "moodle": {
-                "URL": "https://moodlesite.edu",
-                "TOKEN": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-            },
-            "conduit": {
-                "USER": "https://moodlesite.edu/blocks/conduit/webservices/rest/user.php",
-                "COURSE": "https://moodlesite.edu/blocks/conduit/webservices/rest/course.php",
-                "GROUPS": "https://moodlesite.edu/blocks/conduit/webservices/rest/groups.php",
-                "ENROLL": "https://moodlesite.edu/blocks/conduit/webservices/rest/enroll.php",
-                "GROUPS_MEMBERS": "https://moodlesite.edu/blocks/conduit/webservices/rest/groups_members.php"
-            }
-        },
-        "hubspot": {
-            "accessToken": "xxx-xxx-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-        },
-        "whatsapp": {
-            "um_api_send_url": "https://whatsapp.univermilenium.mx/"
-        },
-        "validacurp": {
-            "urls": {
-                "base": "api.valida-curp.com.mx",
-                "obtener_datos": "/curp/obtener_datos"
-            },
-            "token": "00000000-0000-0000-0000-000000000000"
-        },
         "temp_files_path": "C:\\tmp\\",
         "pagination_limit": 10,
-        "timezoneoffset": -5
+        "timezoneoffset": -5,
+        "ciclo_actual": "263"
     },
     "production": {
-        "fullurl": "https://online-tools.univermilenium.edu.mx/",
-        "bearer_tokens": [
-            "00000000-0000-0000-0000-000000000000"
-        ],
-        "db": {
-            "username": "user",
-            "password": "pass",
-            "database": "reportesUM_dev",
-            "host": "127.0.0.1",
-            "port": 3306,
-            "dialect": "mariadb",
-            "define": {
-                "timestamps": true,
-                "freezeTableName": true
-            },
-            "dialectOptions": {
-                "timezone": "Etc/GMT-5"
-            },
-            "logging": false
-        },
-        "email": {
-            "from": "DEV1 reportesUMv2<user@email.com>",
-            "senders": {
-                "TOLUCA RECTORÍA": "no-contestar-rectoria@univermilenium.edu.mx",
-                "NEZAHUALCÓYOTL": "no-contestar-neza@univermilenium.edu.mx",
-                "IXTAPALUCA": "no-contestar-ixtapa@univermilenium.edu.mx",
-                "TOLUCA AV. HIDALGO": "no-contestar-hidalgo@univermilenium.edu.mx",
-                "TOLUCA CIENCIAS DE LA SALUD": "no-contestar-salud@univermilenium.edu.mx",
-                "ECATEPEC": "no-contestar-ecatepec@univermilenium.edu.mx",
-                "PANTITLÁN": "no-contestar-pantitlan@univermilenium.edu.mx",
-                "CUAUTITLÁN": "no-contestar-cuautitlan@univermilenium.edu.mx",
-                "CHALCO": "no-contestar-chalco@univermilenium.edu.mx",
-                "EN LÍNEA": "no-contestar-enlinea@univermilenium.edu.mx",
-                "EDUCACIÓN CONTINUA": "no-contestar-edcontinua@univermilenium.edu.mx"
-            }
-        },
+        "fullurl": "https://redirlogin.univermilenium.edu.mx/",
         "google": {
             "client_id": "xxxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.apps.googleusercontent.com",
             "project_id": "xxxxxxxxxxxx-xxxxxxxxxxxxx",
@@ -163,48 +54,9 @@
                 "datastudio":"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
             }
         },
-        "aws": {
-            "s3": {
-                "bucket": "xxxxxxxxxxxxxxxx",
-                "region": "us-west-1",
-                "access_key_id": "xxxxxxxxxxxxxxxxxxxx",
-                "secret_access_key": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-                "session_token": "",
-                "endpoint": "",
-                "prefix": "google-drive",
-                "acl": "",
-                "storage_class": "",
-                "force_path_style": false
-            }
-        },
-        "openlms": {
-            "moodle": {
-                "URL": "https://moodlesite.edu",
-                "TOKEN": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-            },
-            "conduit": {
-                "USER": "https://moodlesite.edu/blocks/conduit/webservices/rest/user.php",
-                "COURSE": "https://moodlesite.edu/blocks/conduit/webservices/rest/course.php",
-                "GROUPS": "https://moodlesite.edu/blocks/conduit/webservices/rest/groups.php",
-                "ENROLL": "https://moodlesite.edu/blocks/conduit/webservices/rest/enroll.php",
-                "GROUPS_MEMBERS": "https://moodlesite.edu/blocks/conduit/webservices/rest/groups_members.php"
-            }
-        },
-        "hubspot": {
-            "accessToken": "xxx-xxx-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-        },
-        "whatsapp": {
-            "um_api_send_url": "https://whatsapp.univermilenium.mx/"
-        },
-        "validacurp": {
-            "urls": {
-                "base": "api.valida-curp.com.mx",
-                "obtener_datos": "/curp/obtener_datos"
-            },
-            "token": "00000000-0000-0000-0000-000000000000"
-        },
         "temp_files_path": "C:\\tmp\\",
         "pagination_limit": 10,
-        "timezoneoffset": -5
+        "timezoneoffset": -5,
+        "ciclo_actual": "263"
     }
 }
