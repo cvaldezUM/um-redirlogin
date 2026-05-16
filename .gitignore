@@ -1,0 +1,12 @@
+
+.idea/
+node_modules/
+tmp/
+uploads/
+txts/
+sessions/
+chats/
+web.config
+config/config.json
+desktop.ini
+package-lock.json

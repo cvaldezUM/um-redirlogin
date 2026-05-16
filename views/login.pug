@@ -1,0 +1,58 @@
+doctype html
+head
+    // Required meta tags
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    title Iniciar Sesión
+    // Favicon & icon for browsers and mobile tags
+    link(rel='apple-touch-icon' sizes='180x180' href='/img/favicon/apple-touch-icon.png')
+    link(rel='icon' type='image/png' sizes='32x32' href='/img/favicon/favicon-32x32.png')
+    link(rel='icon' type='image/png' sizes='16x16' href='/img/favicon/favicon-16x16.png')
+    link(rel='manifest' href='/img/favicon/site.webmanifest')
+    link(rel='mask-icon' href='/img/favicon/safari-pinned-tab.svg' color='#5bbad5')
+    link(rel='shortcut icon' href='/img/favicon/favicon.ico')
+    meta(name='apple-mobile-web-app-title' content='Sistema de Seguimiento UM')
+    meta(name='application-name' content='Sistema de Seguimiento UM')
+    meta(name='msapplication-TileColor' content='#b91d47')
+    meta(name='msapplication-config' content='/img/favicon/browserconfig.xml')
+    meta(name='theme-color' content='#ffffff')
+    // Login CSS
+    link(rel='stylesheet' href='/css/login.css')
+body.login_body.not_d_o_s
+    if moduledata.googleLoggedIn
+        main.session_choice.animate__animated.animate__fadeIn.animate__faster
+            .session_brand
+                img.session_brand_logo(src='/img/logotipo.png' alt='Universidad UniverMilenium')
+            p.session_status Tu sesión ya está activa
+            if moduledata.googleUser
+                .session_user
+                    if moduledata.googleUser.email
+                        .session_user_row
+                            span.session_user_label Correo
+                            span.session_user_value= moduledata.googleUser.email
+                    if moduledata.googleUser.fullName
+                        .session_user_row
+                            span.session_user_label Nombre
+                            span.session_user_value= moduledata.googleUser.fullName
+            .session_grid
+                a.choice_card.choice_card_primary(href=moduledata.continueurl)
+                    span.choice_icon(role='img' aria-hidden='true') 📋
+                    span.choice_label Continuar
+                    span.choice_hint Ir a la encuesta
+                form.choice_form(method='post' action='/logout')
+                    button.choice_card.choice_card_secondary(type='submit')
+                        span.choice_icon(role='img' aria-hidden='true') 🚪
+                        span.choice_label Cerrar sesion
+                        span.choice_hint Finalizar la sesion actual
+    else
+        .login_info.animate__animated.animate__fadeIn.animate__faster
+            .img_header
+                img(src='/img/logotipo_full_w.png')
+            .li_bottom
+                h5 Sistema de Herramientas UM
+                .lib_img
+                p.indication Ingresa con tu correo institucional
+                - var location = "location='" + moduledata.authurl + "'";
+                button.btn.btn-secondary.btn_google(type='button' onclick=location)
+                    img(src='https://accounts.google.com/favicon.ico' alt='Logo Google' width='24' height='24')
+                    | Google

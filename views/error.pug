@@ -1,0 +1,21 @@
+doctype html
+head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    title Error
+    link(rel='apple-touch-icon' sizes='180x180' href='/img/favicon/apple-touch-icon.png')
+    link(rel='icon' type='image/png' sizes='32x32' href='/img/favicon/favicon-32x32.png')
+    link(rel='icon' type='image/png' sizes='16x16' href='/img/favicon/favicon-16x16.png')
+    link(rel='manifest' href='/img/favicon/site.webmanifest')
+    link(rel='mask-icon' href='/img/favicon/safari-pinned-tab.svg' color='#5bbad5')
+    link(rel='shortcut icon' href='/img/favicon/favicon.ico')
+    meta(name='theme-color' content='#ffffff')
+    link(rel='stylesheet' href='/css/login.css')
+body.login_body.not_d_o_s
+    .login_info
+        .img_header
+            img(src='/img/logotipo_full_w.png' alt='Logo UM')
+        .li_bottom
+            h5= message || 'Error'
+            p.indication= detail || 'Ocurrio un error inesperado.'
+            a.btn.btn-secondary(href='/login') Volver al acceso
